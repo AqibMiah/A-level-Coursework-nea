@@ -2119,7 +2119,7 @@ def report(): # define function to create report
 
         emailSend = smtplib.SMTP('smtp.gmail.com', 587) #connect to smtp server with correct port
         emailSend.starttls() #establish secure connection
-        emailSend.login('aqibmiah2005@gmail.com', 'zrnbbyygforpznls') #login to smpt server
+        emailSend.login('aqibmiah2005@gmail.com', 'smtp password required') #login to smpt server
         emailSend.sendmail(sender, receiver, emailMessage.as_string()) # send the email
         emailSend.quit()#quit
         tk.messagebox.showerror('email sent', 'Email was sent!')
@@ -2511,7 +2511,7 @@ def feedBack(): # define function to send feedback
 
         emailFeedbackSend = smtplib.SMTP('smtp.gmail.com', 587)#connect tp smtp server  with correct port
         emailFeedbackSend.starttls()#establish secure connection
-        emailFeedbackSend.login('aqibmiah2005@gmail.com', 'zrnbbyygforpznls')#login to smtp server
+        emailFeedbackSend.login('aqibmiah2005@gmail.com', 'smtp password required')#login to smtp server
         emailFeedbackSend.sendmail(senderEmail, recieverEmail, f'Subject: {feedbackSubject}\n\n{feedbackMessage}')#send email
         emailFeedbackSend.quit()#quit
         tk.messagebox.showerror('email sent', 'Email was sent!')
