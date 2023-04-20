@@ -95,7 +95,7 @@ def createChartForMM():
     plt.bar(range(len(MMChart_totals)), MMChartValues, tick_label=MMChartNames)
 
     fileName = 'Products MM Data'
-    plt.savefig(f'/Users/aqibmiah/Downloads/{fileName}')
+    plt.savefig(os.path.expanduser(f'~/Downloads/{fileName}'))
     plt.close()
 
 
