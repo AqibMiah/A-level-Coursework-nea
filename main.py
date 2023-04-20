@@ -2029,7 +2029,7 @@ def report(): # define function to create report
                     plt.pie(productValues, labels=productNames, autopct='%1.1f%%') #create a pie chart with percentages
 
                     fileName = chartSavedNameEntry.get()
-                    plt.savefig(f'/Users/aqibmiah/Downloads/{fileName}') #store png file in downloads
+                    plt.savefig(os.path.expanduser(f'~/Downloads/{fileName}')) #store png file in downloads
                     plt.close() #close plt file
                     sendEmail() #call function to send the email
 
@@ -2045,7 +2045,7 @@ def report(): # define function to create report
                     plt.bar(range(len(product_totals)), productValues, tick_label=productNames) # create the bar chart
 
                     fileName = chartSavedNameEntry.get()
-                    plt.savefig(f'/Users/aqibmiah/Downloads/{fileName}') #save chart to downloads with file name
+                    plt.savefig(os.path.expanduser(f'~/Downloads/{fileName}')) #save chart to downloads with file name
                     plt.close()
                     sendEmail()
 
@@ -2074,7 +2074,7 @@ def report(): # define function to create report
                     plt.pie(supplierValues, labels=supplierNames, autopct='%1.1f%%')
 
                     fileName = chartSavedNameEntry.get()
-                    plt.savefig(f'/Users/aqibmiah/Downloads/{fileName}')
+                    plt.savefig(os.path.expanduser(f'~/Downloads/{fileName}'))
                     plt.close()
                     sendEmail()
 
@@ -2089,7 +2089,7 @@ def report(): # define function to create report
                     plt.bar(range(len(supplier_totals)), supplierValues, tick_label=supplierNames)
 
                     fileName = chartSavedNameEntry.get()
-                    plt.savefig(f'/Users/aqibmiah/Downloads/{fileName}')
+                    plt.savefig(os.path.expanduser(f'~/Downloads/{fileName}'))
                     plt.close()
                     sendEmail()
         else:
